@@ -38,16 +38,20 @@
 	  <div class="col-md-2"></div>
 	</div>
 	<div class="row">
-	  <div class="col-md-4">
+	  <div class="col-md-3">
+	  </div>	
+	  <div class="col-md-2">
 	  	<a href={{prev}}>Previous {{_type}}</a>
 	  </div>
-	  <div class="col-md-4">
+	  <div class="col-md-2">
 	  	%if _type == "month":
 	  	<a href={{year}}>To year view</a>
 	  	%end
 	  </div>
-	  <div class="col-md-4">
+	  <div class="col-md-2">
 	  	<a href={{next}}>Next {{_type}}</a>
+	  </div>
+	  <div class="col-md-3">
 	  </div>
 	</div>
 		
