@@ -52,4 +52,4 @@ def year_view(year):
 		prev=_a(year-1),next=_a(year+1),_type="year")
 
 if __name__ == "__main__":
-	run(host="127.0.0.1",port = PORT,debug=True,reload=True)
+	run(host="0.0.0.0",port = PORT,debug=True,reload=True)
