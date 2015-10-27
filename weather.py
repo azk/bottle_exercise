@@ -27,13 +27,27 @@ def load_weather_data(path=JSON_PATH):
 				monthly_max += temps[1]
 				monthly_count += 1
 
-			years_d[year][month]['average_min'] = float(monthly_min)/monthly_count
-			years_d[year][month]['average_max'] = float(monthly_max)/monthly_count
+			years_d[year][month]['averages'] = (float(monthly_min)/monthly_count,
+				float(monthly_max)/monthly_count)
 
 	return years_d
 
 _weather_data = load_weather_data()
 
-def get_daily_temps(day,month,year):
+def get_temps(year,month = None,day = None):
 
-def get_monthly_averages(month,year)
+	d = _weather_data[year]
+
+	if d and month:
+		d = d[month]
+
+	if d and day:
+		d = d.get(day)
+
+	return d if d else None
+
+def get_monthly_averages(year,month):
+
+	d = _weather_data[year][month]
+
+	return d['averages'] if d else None
